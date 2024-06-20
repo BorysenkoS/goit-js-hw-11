@@ -6,10 +6,10 @@ export function getImages(userText) {
     image_type: 'photo',
     orientation: 'horisontal',
     safesearch: 'true',
+    per_page: 50,
   });
 
   const url = `${BASE_URL}?${params}`;
-  console.log(url);
   return fetch(url)
     .then(res => res.json())
     .catch(error => console.log());

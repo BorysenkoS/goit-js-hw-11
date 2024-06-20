@@ -9,13 +9,13 @@ export function imageTemplate(image) {
     downloads,
   } = image;
   return `<li class="gallery-item">
-          <a class="gallery-link" href="${webformatURL}">
-            <img class="gallery-image" src="${largeImageURL}" alt="${tags}" width="360" height="200";/>
+          <a class="gallery-link" href="${largeImageURL}">
+            <img class="gallery-image" src="${webformatURL}" alt="${tags}" />
             <div class="gallery-describe">
-              <p class="gallery-text">Likes${likes}</p>
-              <p class="gallery-text">Views${views}</p>
-              <p class="gallery-text">Comments${comments}</p>
-              <p class="gallery-text">Downloads${downloads}</p>
+              <p class="gallery-text">Likes <br>${likes}</p>
+              <p class="gallery-text">Views<br>${views}</p>
+              <p class="gallery-text">Comments<br>${comments}</p>
+              <p class="gallery-text">Downloads<br>${downloads}</p>
             </div>
           </a>
         </li>`;
