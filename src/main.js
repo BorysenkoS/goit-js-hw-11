@@ -66,7 +66,19 @@ refs.formElem.addEventListener('submit', e => {
           hideLoader();
         }
       })
-      .catch(ERROR => console.log(ERROR))
+      .catch(ERROR => {
+        iziToast.show({
+          iconUrl: imageUrl,
+          title: 'Error',
+          titleColor: 'white',
+          message: 'Error!',
+          messageColor: 'white',
+          messageSize: '16px',
+          backgroundColor: '#ef4040',
+          position: 'topRight',
+          theme: 'dark',
+        });
+      })
       .finally(() => {
         hideLoader();
       });

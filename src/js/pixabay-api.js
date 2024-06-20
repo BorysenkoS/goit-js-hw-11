@@ -12,5 +12,17 @@ export function getImages(userText) {
   const url = `${BASE_URL}?${params}`;
   return fetch(url)
     .then(res => res.json())
-    .catch(error => console.log());
+    .catch(error => {
+      iziToast.show({
+        iconUrl: imageUrl,
+        title: 'Error',
+        titleColor: 'white',
+        message: 'Error!',
+        messageColor: 'white',
+        messageSize: '16px',
+        backgroundColor: '#ef4040',
+        position: 'topRight',
+        theme: 'dark',
+      });
+    });
 }
